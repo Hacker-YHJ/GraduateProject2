@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_border">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/screen"
+            android:textSize="48dp"
+            android:padding="20dp"
+            android:background="@drawable/bottom_border"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/pinyinIndicator"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:background="@drawable/top_left_border"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#FFF" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/inputContainer">
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:columnCount="4"
+            android:rowCount="6"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/right_border">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="b"
+                    android:textOn="b"
+                    android:textOff="b"
+                    android:id="@+id/btn_b"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="p"
+                    android:textOn="p"
+                    android:textOff="p"
+                    android:id="@+id/btn_p"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="m"
+                    android:textOn="m"
+                    android:textOff="m"
+                    android:id="@+id/btn_m"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="f"
+                    android:textOn="f"
+                    android:textOff="f"
+                    android:id="@+id/btn_f"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="d"
+                    android:textOn="d"
+                    android:textOff="d"
+                    android:id="@+id/btn_d"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="t"
+                    android:textOn="t"
+                    android:textOff="t"
+                    android:id="@+id/btn_t"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="n"
+                    android:textOn="n"
+                    android:textOff="n"
+                    android:id="@+id/btn_n"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="l"
+                    android:textOn="l"
+                    android:textOff="l"
+                    android:id="@+id/btn_l"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="h"
+                    android:textOn="h"
+                    android:textOff="h"
+                    android:id="@+id/btn_h"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="y"
+                    android:textOn="y"
+                    android:textOff="y"
+                    android:id="@+id/btn_y"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="g"
+                    android:textOn="g"
+                    android:textOff="g"
+                    android:id="@+id/btn_g"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="k"
+                    android:textOn="k"
+                    android:textOff="k"
+                    android:id="@+id/btn_k"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="j"
+                    android:textOn="j"
+                    android:textOff="j"
+                    android:id="@+id/btn_j"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="q"
+                    android:textOn="q"
+                    android:textOff="q"
+                    android:id="@+id/btn_q"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="x"
+                    android:textOn="x"
+                    android:textOff="x"
+                    android:id="@+id/btn_x"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="w"
+                    android:textOn="w"
+                    android:textOff="w"
+                    android:id="@+id/btn_w"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="c"
+                    android:textOn="c"
+                    android:textOff="c"
+                    android:id="@+id/btn_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="ch"
+                    android:textOn="ch"
+                    android:textOff="ch"
+                    android:id="@+id/btn_ch"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="z"
+                    android:textOn="z"
+                    android:textOff="z"
+                    android:id="@+id/btn_z"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="zh"
+                    android:textOn="zh"
+                    android:textOff="zh"
+                    android:id="@+id/btn_zh"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="s"
+                    android:textOn="s"
+                    android:textOff="s"
+                    android:id="@+id/btn_s"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="sh"
+                    android:textOn="sh"
+                    android:textOff="sh"
+                    android:id="@+id/btn_sh"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+
+                <ToggleButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="r"
+                    android:textOn="r"
+                    android:textOff="r"
+                    android:id="@+id/btn_r"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_span="2"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="#20262A"
+            android:id="@+id/charSelectView"
+            android:numColumns="6"
+            android:gravity="center"
+            android:stretchMode="columnWidth"
+            android:horizontalSpacing="20px"
+            android:padding="40px"
+            android:verticalSpacing="10px" />
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:columnCount="6"
+            android:rowCount="6"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/left_border">
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="a"
+                    android:textOn="a"
+                    android:textOff="a"
+                    android:id="@+id/btn_a"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="e"
+                    android:textOn="e"
+                    android:textOff="e"
+                    android:id="@+id/btn_e"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="i"
+                    android:textOn="i"
+                    android:textOff="i"
+                    android:id="@+id/btn_i"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="u"
+                    android:textOn="u"
+                    android:textOff="u"
+                    android:id="@+id/btn_u"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_column="4" />
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ai"
+                    android:textOn="ai"
+                    android:textOff="ai"
+                    android:id="@+id/btn_ai"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ei"
+                    android:textOn="ei"
+                    android:textOff="ei"
+                    android:id="@+id/btn_ei"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ia"
+                    android:textOn="ia"
+                    android:textOff="ia"
+                    android:id="@+id/btn_ia"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ie"
+                    android:textOn="ie"
+                    android:textOff="ie"
+                    android:id="@+id/btn_ie"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ua"
+                    android:textOn="ua"
+                    android:textOff="ua"
+                    android:id="@+id/btn_ua"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ue"
+                    android:textOn="ue"
+                    android:textOff="ue"
+                    android:id="@+id/btn_ue"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="an"
+                    android:textOn="an"
+                    android:textOff="an"
+                    android:id="@+id/btn_an"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="en"
+                    android:textOn="en"
+                    android:textOff="en"
+                    android:id="@+id/btn_en"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ian"
+                    android:textOn="ian"
+                    android:textOff="ian"
+                    android:id="@+id/btn_ian"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="in"
+                    android:textOn="in"
+                    android:textOff="in"
+                    android:id="@+id/btn_in"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="uai"
+                    android:textOn="uai"
+                    android:textOff="uai"
+                    android:id="@+id/btn_uai"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ui"
+                    android:textOn="ui"
+                    android:textOff="ui"
+                    android:id="@+id/btn_ui"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ang"
+                    android:textOn="ang"
+                    android:textOff="ang"
+                    android:id="@+id/btn_ang"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="eng"
+                    android:textOn="eng"
+                    android:textOff="eng"
+                    android:id="@+id/btn_eng"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="iang"
+                    android:textOn="iang"
+                    android:textOff="iang"
+                    android:id="@+id/btn_iang"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ing"
+                    android:textOn="ing"
+                    android:textOff="ing"
+                    android:id="@+id/btn_ing"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="uan"
+                    android:textOn="uan"
+                    android:textOff="uan"
+                    android:id="@+id/btn_uan"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="un"
+                    android:textOn="un"
+                    android:textOff="un"
+                    android:id="@+id/btn_un"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ao"
+                    android:textOn="ao"
+                    android:textOff="ao"
+                    android:id="@+id/btn_ao"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="er"
+                    android:textOn="er"
+                    android:textOff="er"
+                    android:id="@+id/btn_er"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="iao"
+                    android:textOn="iao"
+                    android:textOff="iao"
+                    android:id="@+id/btn_iao"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="iu"
+                    android:textOn="iu"
+                    android:textOff="iu"
+                    android:id="@+id/btn_iu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="uang"
+                    android:textOn="uang"
+                    android:textOff="uang"
+                    android:id="@+id/btn_uang"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="uo"
+                    android:textOn="uo"
+                    android:textOff="uo"
+                    android:id="@+id/btn_uo"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="o"
+                    android:textOn="o"
+                    android:textOff="o"
+                    android:id="@+id/btn_o"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ou"
+                    android:textOn="ou"
+                    android:textOff="ou"
+                    android:id="@+id/btn_ou"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="ong"
+                    android:textOn="ong"
+                    android:textOff="ong"
+                    android:id="@+id/btn_ong"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="iong"
+                    android:textOn="iong"
+                    android:textOff="iong"
+                    android:id="@+id/btn_iong"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+                <ToggleButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:text="v"
+                    android:textOn="v"
+                    android:textOff="v"
+                    android:id="@+id/btn_v"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:background="@drawable/flat_toggle_button_bg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</LinearLayout>
